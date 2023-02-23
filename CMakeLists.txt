@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.24)
+cmake_minimum_required(VERSION 3.22)
 project(fsm VERSION 1.0.0 LANGUAGES CXX)
 
 # Disable C and C++ compiler extensions. C/CXX_EXTENSIONS are ON by default to

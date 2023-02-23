@@ -7,6 +7,7 @@
 ![Clang 15](assets/bench-clang15.png) ![GCC 12.1](assets/bench-gcc12.1.png)
 
 
+- Header only library
 - No internal/external events, no pre/post transition actions, no explicit guards other than preventing invalid 
 transitions (see examples).
 - The initial state is implicitly defined with the first element in `states`.
@@ -14,7 +15,14 @@ transitions (see examples).
 TODO:
 - handle leveraged markets (e.g. margin calls)
 
-
+## Usage
+Run benchmarks:
+```shell
+mkdir build && cd build
+cmake ..
+make all
+./bin/benchmark_StaticPolymorphism
+```
 ## Examples
 In `example/OrderFSM.hpp` we show how to implement this state graph of an order with IOT, IOK, GTD and GTC.
 

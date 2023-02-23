@@ -59,6 +59,7 @@ endif()
 
 
 add_subdirectory(benchmarks)
+add_subdirectory(example)
 add_subdirectory(lib)
 
 # library definitions

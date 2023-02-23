@@ -41,26 +41,16 @@ namespace orderfsm {
     };
 
     struct State {
-        struct Sent {
-        }; // order has been sent
-        struct Pending {
-        };  // order received by exchange, in the queue to be processed by the matching engine
-        struct Placed {
-        };   // matching engine on the exchange processed request and placed order in the order book
-        struct PendingCancel {
-        };   // request for order cancellation received by exchange, not yet processed
-        struct Cancelled {
-        };    // order cancelled and pulled from the order book
-        struct PendingModification {
-        }; // modification request received by the exchange, not yet processed
-        struct Filled {
-        };   // whole order matched, producing a trade, order has no remaining volume in the order book
-        struct FilledPartially {
-        }; // part of the order matched, producing a trade, some order volume left in the order book
-        struct Expired {
-        };  // order removed from the order book because it's life expectancy came to an end
-        struct Rejected {
-        }; // order was rejected
+        struct Sent {}; // order has been sent
+        struct Pending {};  // order received by exchange, in the queue to be processed by the matching engine
+        struct Placed {};   // matching engine on the exchange processed request and placed order in the order book
+        struct PendingCancel {};   // request for order cancellation received by exchange, not yet processed
+        struct Cancelled {};    // order cancelled and pulled from the order book
+        struct PendingModification {}; // modification request received by the exchange, not yet processed
+        struct Filled {};   // whole order matched, producing a trade, order has no remaining volume in the order book
+        struct FilledPartially {}; // part of the order matched, producing a trade, some order volume left in the order book
+        struct Expired {};  // order removed from the order book because it's life expectancy came to an end
+        struct Rejected {}; // order was rejected
     };
 
     // we generate events from parsed execution report

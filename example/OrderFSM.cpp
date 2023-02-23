@@ -24,6 +24,6 @@ int main() {
     // the same event can be used to fill the whole order
     order.process(orderfsm::Event::Filled{0});
 
-    // this will throw an exception since the transition is not allwed
+    // this will throw an exception since the transition is not allowed
     order.process(orderfsm::Event::Filled{0});
 }

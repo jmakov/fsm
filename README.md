@@ -1,8 +1,7 @@
 # A simple implementation of a state machine
 
 ## Design decisions
-- Based on benchmark this implementation is based on the CRTP visitor pattern as it seem to be the fastest between   
-  LLVM 15 and GCC 12.1 (pictured). 
+- Based on benchmark this implementation is based on the CRTP visitor pattern as it seem to be the fastest between LLVM 15 and GCC 12.1 (pictured). 
 
 ![Clang 15](assets/bench-clang15.png) ![GCC 12.1](assets/bench-gcc12.1.png)
 
